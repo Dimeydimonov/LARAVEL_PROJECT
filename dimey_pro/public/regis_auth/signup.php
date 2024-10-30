@@ -24,7 +24,7 @@ if($password === $password_confirm) {
     }
     $password = md5($password);
 
-    $query = "INSERT INTO `test2` (`username`, `login`, `email`, `password`, `avatar`) VALUES ('$username', '$login', '$email', '$password', '$path')";
+    $query = "INSERT INTO `test` (`username`, `login`, `email`, `password`, `avatar`) VALUES ('$username', '$login', '$email', '$password', '$path')";
     if (mysqli_query($connect, $query)) {
         $_SESSION['message'] = "Успішно";
         header('Location: /regis_auth/auth.php');
